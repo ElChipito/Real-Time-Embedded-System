@@ -1,0 +1,37 @@
+=============================================================================================
+                            EXPLICATIONS DE MON PROJET FreeRTOS
+=============================================================================================
+
+1) LISTE DES TÂCHES + PÉRIODES
+--------------------------------
+- Tâche 1 : “Working” – 100 ms
+- Tâche 2 : Conversion température – 60 ms
+- Tâche 3 : Multiplication grands nombres – 150 ms
+- Tâche 4 : Recherche binaire (50 éléments) – 25 ms
+- Tâche 5 : Tâche RESET – 200 ms 
+
+Ces taches ont des priorités de la plus petite (Tâche 4), à la plus grande (Tâche 5)
+             (Tâche 5 > Tâche 1 > Tâche 2 > Tâche 3 > Tâche 4)
+
+2) WORST CASE EXECUTION TIMES (WCET)
+-------------------------------------
+- Tâche 1 : ~100 µs
+- Tâche 2 : ~100 µs
+- Tâche 3 : ~200 µs
+- Tâche 4 : ~100 µs
+- Tâche 5 : ~200 µs
+
+En fait, les opérations sont assez simples (printf, boucles courtes), j'ai supposé que mon processeur les exécute très vite !
+
+3) SCHEDULABILITY
+------------------------------
+J'ai fais un test, comme dans le cours : U = Σ(C_i / T_i).
+
+Les WCET que j'ai ici sont bien inférieures aux périodes, donc U << 1, c'est certain
+L’ensemble est ordonnançable sans souci (en fixed priority).
+
+LIEN GIT
+------------
+https://github.com/MonCompte/MonProjet 
+
+
