@@ -32,6 +32,6 @@ L’ensemble est ordonnançable sans souci (en fixed priority).
 
 LIEN GIT
 ------------
-https://github.com/MonCompte/MonProjet 
+https://github.com/ElChipito/Real-Time-Embedded-System
 
 
